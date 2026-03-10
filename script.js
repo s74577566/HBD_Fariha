@@ -92,6 +92,14 @@ function triggerSurprise() {
 }
 
 // ============================================
+// SKIP TO MAIN — লক স্ক্রিন থেকে সরাসরি মূল কন্টেন্টে যাও
+// ============================================
+function skipToMain() {
+  // Keep button behavior identical to the scheduled midnight unlock.
+  triggerSurprise();
+}
+
+// ============================================
 // PETALS — গোলাপ পাপড়ি ঝরানো
 // ============================================
 const PETAL_EMOJIS = ['🌸', '🌹', '🌺', '💐', '🌷', '💛', '💗', '✨'];
