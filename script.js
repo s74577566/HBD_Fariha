@@ -5,7 +5,7 @@
 // ============================================
 // CONFIG — এখানে সময় নির্ধারণ করুন
 // ============================================
-const UNLOCK_DATE = new Date('2025-03-11T00:00:00'); // ১১ই মার্চ রাত ১২:০০
+const UNLOCK_DATE = new Date('2026-03-11T00:00:00'); // ১১ই মার্চ রাত ১২:০০
 
 // ============================================
 // চিঠির লেখা — এখানে পরিবর্তন করুন
@@ -70,7 +70,7 @@ function triggerSurprise() {
   clearInterval(countdownInterval);
 
   const lockScreen = document.getElementById('lock-screen');
-  const openingScreen = document.getElementById('opening-screen');
+  const mainContent = document.getElementById('main-content');
 
   // Lock screen fade out
   lockScreen.classList.add('fade-out');
@@ -79,9 +79,15 @@ function triggerSurprise() {
     lockScreen.style.display = 'none';
     lockScreen.classList.remove('active');
 
-    // Opening screen fade in
-    openingScreen.classList.add('active');
-    createPetals();
+    // Go directly to main content
+    mainContent.classList.remove('hidden');
+    mainContent.style.display = 'block';
+
+    // Initialize all main content features
+    initScrollReveal();
+    initSlideshow();
+    typewriterLetter();
+    createFooterHearts();
   }, 800);
 }
 
@@ -378,13 +384,9 @@ document.addEventListener('DOMContentLoaded', () => {
   createParticles();
   initCursorTrail();
 
-  // ✅ TEST MODE চালু — লক স্ক্রিন বাইপাস
-  // সব দেখা শেষে VS Code Agent দিয়ে ঠিক করো
-  triggerSurprise();
-
-  // 🔒 LIVE MODE — টেস্ট শেষে এটা চালু করো:
-  // updateCountdown();
-  // window.countdownInterval = setInterval(updateCountdown, 1000);
+  // 🔒 LIVE MODE — ১১ই মার্চ রাত ১২টায় খুলবে
+  updateCountdown();
+  window.countdownInterval = setInterval(updateCountdown, 1000);
 });
 
 // ============================================
