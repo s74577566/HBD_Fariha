@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>পরীর জন্য 🌸</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Bengali:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ============ FLOATING PARTICLES ============ -->
+  <div id="particles-container"></div>
+
+  <!-- ============ LOCK SCREEN ============ -->
+  <section id="lock-screen" class="screen active">
+    <div class="stars-bg"></div>
+    <div class="lock-content">
+      <div class="lock-icon">🔒</div>
+      <h2 class="lock-title">পরীর জন্য একটা বিশেষ চমক<br/>অপেক্ষা করছে...</h2>
+      <p class="lock-sub">১১ই মার্চ মধ্যরাতে খুলবে</p>
+      <div class="countdown-box">
+        <div class="time-unit">
+          <span id="cd-hours">00</span>
+          <label>ঘণ্টা</label>
+        </div>
+        <div class="time-sep">:</div>
+        <div class="time-unit">
+          <span id="cd-minutes">00</span>
+          <label>মিনিট</label>
+        </div>
+        <div class="time-sep">:</div>
+        <div class="time-unit">
+          <span id="cd-seconds">00</span>
+          <label>সেকেন্ড</label>
+        </div>
+      </div>
+      <p class="lock-love">— তোমার শুভ 💛</p>
+    </div>
+  </section>
+
+  <!-- ============ OPENING SCREEN ============ -->
+  <section id="opening-screen" class="screen">
+    <div class="petals-container" id="petals"></div>
+    <div class="opening-content">
+      <div class="birthday-emoji">🎂</div>
+      <h1 class="birthday-title">জন্মদিন মুবারক</h1>
+      <h2 class="birthday-subtitle">আমার পরী!</h2>
+      <p class="birthday-from">— তোমার শুভ'র পক্ষ থেকে 💛</p>
+      <button class="scroll-btn" onclick="goToMain()">
+        <span>দেখতে থাকো</span>
+        <span class="arrow">↓</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <div id="main-content" class="hidden">
+
+    <!-- NAV -->
+    <nav id="main-nav">
+      <div class="nav-brand">পরী 🌸</div>
+      <div class="nav-links">
+        <a href="#photos-section">স্মৃতি</a>
+        <a href="#special-photos-section">শুভ'র চোখে পরী</a>
+        <a href="#timeline-section">আমাদের গল্প</a>
+        <a href="#letter-section">চিঠি</a>
+      </div>
+    </nav>
+
+    <!-- ============ PHOTO SLIDESHOW — সাধারণ সব ছবি ============ -->
+    <section id="photos-section" class="content-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">আমাদের স্মৃতি 📸</h2>
+        <div class="title-line"></div>
+        <p class="section-sub">প্রতিটা ছবি একটা গল্প বলে</p>
+      </div>
+
+      <div class="slideshow-wrapper reveal">
+        <div class="slideshow-frame">
+          <div class="slides-container" id="slides-container">
+
+            <!-- ============================================ -->
+            <!-- সাধারণ ছবি এখানে — VS Code Agent দিয়ে যোগ করো -->
+            <!-- ফরম্যাট:
+            <div class="slide active">
+              <img src="img/photo1.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আমাদের একটি বিশেষ মুহূর্ত 💛</div>
+            </div>
+            <div class="slide">
+              <img src="img/photo2.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আরেকটি সুন্দর স্মৃতি 🌸</div>
+            </div>
+            -->
+            <!-- ============================================ -->
+
+            <div class="slide active">
+              <img src="img/photo_6161089530979618816_y.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আমাদের একটি বিশেষ মুহূর্ত 💛</div>
+            </div>
+            <div class="slide">
+              <img src="img/photo_6161089530979618819_y.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আমাদের একটি বিশেষ মুহূর্ত 🌸</div>
+            </div>
+            <div class="slide">
+              <img src="img/photo_6161089530979618823_y.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আমাদের একটি বিশেষ মুহূর্ত 🌹</div>
+            </div>
+            <div class="slide">
+              <img src="img/photo_6161089530979618824_y.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আমাদের একটি বিশেষ মুহূর্ত 💝</div>
+            </div>
+            <div class="slide">
+              <img src="img/photo_6161089530979618826_y.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আমাদের একটি বিশেষ মুহূর্ত ✨</div>
+            </div>
+            <div class="slide">
+              <img src="img/photo_6161089530979618827_y.jpg" alt="আমাদের স্মৃতি" />
+              <div class="slide-caption">আমাদের একটি বিশেষ মুহূর্ত 💫</div>
+            </div>
+
+          </div>
+
+          <button class="slide-btn prev" onclick="changeSlide(-1)">‹</button>
+          <button class="slide-btn next" onclick="changeSlide(1)">›</button>
+          <div class="slide-dots" id="slide-dots"></div>
+        </div>
+        <div class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">1</span></div>
+      </div>
+    </section>
+
+    <!-- ============ ১০টি বিশেষ ছবি + স্পেশাল বাক্য ============ -->
+    <section id="special-photos-section" class="content-section pink-bg">
+      <div class="section-header reveal">
+        <h2 class="section-title">শুভ'র চোখে পরী 💝</h2>
+        <div class="title-line gold"></div>
+        <p class="section-sub">১০টি বিশেষ মুহূর্ত — ১০টি কথা</p>
+      </div>
+
+      <div class="special-photos-grid">
+
+        <!-- বিশেষ ছবি ১ -->
+        <div class="special-card reveal" data-delay="0">
+          <div class="special-img-wrap">
+            <!-- ছবি ১ এখানে — VS Code দিয়ে src বসাও -->
+            <img src="img/photo_6161089530979618829_y.jpg" alt="বিশেষ ছবি ১" class="special-img" id="simg-1" />
+            <div class="special-img-placeholder" id="sph-1">
+              <span>📷</span>
+              <small>বিশেষ ছবি ১</small>
+            </div>
+            <div class="special-number">০১</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">💛</div>
+            <h3>তুমি আমার প্রথম ভালোবাসা</h3>
+            <p>তুমিই সেই একমাত্র মানুষ, যাকে দেখে আমার হৃদয় প্রথমবার বুঝেছিল — ভালোবাসা মানে কী।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ২ -->
+        <div class="special-card reveal" data-delay="100">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618818_y.jpg" alt="বিশেষ ছবি ২" class="special-img" id="simg-2" />
+            <div class="special-img-placeholder" id="sph-2">
+              <span>📷</span>
+              <small>বিশেষ ছবি ২</small>
+            </div>
+            <div class="special-number">০২</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">🧭</div>
+            <h3>তুমি আমার সকল বিভ্রান্তির উত্তর</h3>
+            <p>যখনই পথ হারিয়ে ফেলি, তোমার একটা কথাই যথেষ্ট — সব কনফিউশন মুহূর্তে মিলিয়ে যায়।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ৩ -->
+        <div class="special-card reveal" data-delay="200">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618820_y.jpg" alt="বিশেষ ছবি ৩" class="special-img" id="simg-3" />
+            <div class="special-img-placeholder" id="sph-3">
+              <span>📷</span>
+              <small>বিশেষ ছবি ৩</small>
+            </div>
+            <div class="special-number">০৩</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">⚡</div>
+            <h3>তুমি আমার ডোপামিন</h3>
+            <p>তোমার হাসি দেখলে, তোমার কণ্ঠ শুনলে — পৃথিবীর সব ক্লান্তি এক নিমেষে শেষ হয়ে যায়।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ৪ -->
+        <div class="special-card reveal" data-delay="300">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618828_y.jpg" alt="বিশেষ ছবি ৪" class="special-img" id="simg-4" />
+            <div class="special-img-placeholder" id="sph-4">
+              <span>📷</span>
+              <small>বিশেষ ছবি ৪</small>
+            </div>
+            <div class="special-number">০৪</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">🕌</div>
+            <h3>তুমি আমার দ্বীনের অর্ধেক</h3>
+            <p>তুমি শুধু আমার ভালোবাসা নও — তুমি আমার ঈমানের পথের সঙ্গী, আমার আখিরাতের সাথী।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ৫ -->
+        <div class="special-card reveal" data-delay="400">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618825_y.jpg" alt="বিশেষ ছবি ৫" class="special-img" id="simg-5" />
+            <div class="special-img-placeholder" id="sph-5">
+              <span>📷</span>
+              <small>বিশেষ ছবি ৫</small>
+            </div>
+            <div class="special-number">০৫</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">🔥</div>
+            <h3>তুমি আমার সাহস ও অনুপ্রেরণা</h3>
+            <p>তুমি পাশে থাকলে মনে হয় পৃথিবীর সব বাধা পেরিয়ে যেতে পারব। তুমিই আমার শক্তির উৎস।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ৬ -->
+        <div class="special-card reveal" data-delay="500">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618821_y.jpg" alt="বিশেষ ছবি ৬" class="special-img" id="simg-6" />
+            <div class="special-img-placeholder" id="sph-6">
+              <span>📷</span>
+              <small>বিশেষ ছবি ৬</small>
+            </div>
+            <div class="special-number">০৬</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">👑</div>
+            <h3>তুমি আল্লাহর সেরা নিআমত</h3>
+            <p>আল্লাহ যত নিআমত দিয়েছেন, তার মধ্যে তুমি সবচেয়ে দামি উপহার — আমার জন্য জান্নাতের হুরের সরদার।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ৭ -->
+        <div class="special-card reveal" data-delay="600">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618817_y.jpg" alt="বিশেষ ছবি ৭" class="special-img" id="simg-7" />
+            <div class="special-img-placeholder" id="sph-7">
+              <span>📷</span>
+              <small>বিশেষ ছবি ৭</small>
+            </div>
+            <div class="special-number">০৭</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">🏠</div>
+            <h3>তুমি আমার ঘরের উষ্ণতা</h3>
+            <p>বাইরের দুনিয়া যত কঠিনই হোক, তোমার কাছে ফিরে আসলে মনে হয় — আমি ঘরে এসেছি।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ৮ -->
+        <div class="special-card reveal" data-delay="700">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618815_y.jpg" alt="বিশেষ ছবি ৮" class="special-img" id="simg-8" />
+            <div class="special-img-placeholder" id="sph-8">
+              <span>📷</span>
+              <small>বিশেষ ছবি ৮</small>
+            </div>
+            <div class="special-number">০৮</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">🤲</div>
+            <h3>তুমি আমার দোয়ার কারণ</h3>
+            <p>প্রতিদিন আল্লাহর কাছে শুকরিয়া আদায় করি — কারণ তিনি তোমাকে আমার জীবনে পাঠিয়েছেন।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ৯ -->
+        <div class="special-card reveal" data-delay="800">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618822_y.jpg" alt="বিশেষ ছবি ৯" class="special-img" id="simg-9" />
+            <div class="special-img-placeholder" id="sph-9">
+              <span>📷</span>
+              <small>বিশেষ ছবি ৯</small>
+            </div>
+            <div class="special-number">০৯</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">🌙</div>
+            <h3>তুমি আমার প্রশান্তি</h3>
+            <p>রাতে তোমার কথা মনে পড়লে বুকের ভেতর এক অদ্ভুত শান্তি নামে — যা অন্য কিছুতে মেলে না।</p>
+          </div>
+        </div>
+
+        <!-- বিশেষ ছবি ১০ -->
+        <div class="special-card reveal" data-delay="900">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618814_y.jpg" alt="বিশেষ ছবি ১০" class="special-img" id="simg-10" />
+            <div class="special-img-placeholder" id="sph-10">
+              <span>📷</span>
+              <small>বিশেষ ছবি ১০</small>
+            </div>
+            <div class="special-number">১০</div>
+          </div>
+          <div class="special-caption">
+            <div class="special-icon">♾️</div>
+            <h3>তুমি আমার দুনিয়া ও আখিরাতের সঙ্গী</h3>
+            <p>শুধু এই জীবনে নয় — আল্লাহর কাছে দোয়া করি, জান্নাতেও যেন তুমিই আমার পাশে থাকো।</p>
+          </div>
+        </div>
+
+        <div class="special-card reveal" data-delay="0">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618816_y.jpg" alt="আমাদের স্মৃতি" class="special-img" />
+            <div class="special-img-placeholder">
+              <span>📷</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-card reveal" data-delay="100">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618819_y.jpg" alt="আমাদের স্মৃতি" class="special-img" />
+            <div class="special-img-placeholder">
+              <span>📷</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-card reveal" data-delay="200">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618823_y.jpg" alt="আমাদের স্মৃতি" class="special-img" />
+            <div class="special-img-placeholder">
+              <span>📷</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-card reveal" data-delay="300">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618824_y.jpg" alt="আমাদের স্মৃতি" class="special-img" />
+            <div class="special-img-placeholder">
+              <span>📷</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-card reveal" data-delay="400">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618826_y.jpg" alt="আমাদের স্মৃতি" class="special-img" />
+            <div class="special-img-placeholder">
+              <span>📷</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-card reveal" data-delay="500">
+          <div class="special-img-wrap">
+            <img src="img/photo_6161089530979618827_y.jpg" alt="আমাদের স্মৃতি" class="special-img" />
+            <div class="special-img-placeholder">
+              <span>📷</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ TIMELINE ============ -->
+    <section id="timeline-section" class="content-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">আমাদের গল্প 📖</h2>
+        <div class="title-line"></div>
+        <p class="section-sub">শুভ ও পরীর যাত্রা</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot">💫</div>
+          <div class="timeline-card">
+            <div class="tl-date">প্রথম দেখা</div>
+            <h3>প্রথমবার চোখে চোখ</h3>
+            <p>সেই মুহূর্তটা — যখন প্রথমবার তোমাকে দেখলাম। বুঝিনি তখন, এই মানুষটাই আমার সব হয়ে যাবে।</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot">📱</div>
+          <div class="timeline-card">
+            <div class="tl-date">প্রথম কথা</div>
+            <h3>কথা শুরু হলো</h3>
+            <p>প্রথম কথার পর থেকে বুঝলাম — এই কণ্ঠস্বর, এই মানুষটা আমার জীবনের সবচেয়ে মধুর অংশ।</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot">❤️</div>
+          <div class="timeline-card">
+            <div class="tl-date">ভালোবাসা</div>
+            <h3>ভালোবাসার স্বীকৃতি</h3>
+            <p>যেদিন বললাম "তোমাকে ভালোবাসি" — সেদিন থেকে পৃথিবীটা অন্যরকম সুন্দর লাগতে শুরু করলো।</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot">💍</div>
+          <div class="timeline-card">
+            <div class="tl-date">বিয়ে</div>
+            <h3>চিরকালের বন্ধন</h3>
+            <p>তুমি আমার হলে — আল্লাহর সামনে, পরিবারের সামনে। সেই দিনটা আমার জীবনের সবচেয়ে সুন্দর দিন।</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot">🌟</div>
+          <div class="timeline-card">
+            <div class="tl-date">আজ, ১১ই মার্চ</div>
+            <h3>তোমার জন্মদিন 🎂</h3>
+            <p>আজ সেই বিশেষ দিন — যেদিন আমার পরী এই পৃথিবীতে এসেছিল। আল্লাহকে শুকরিয়া, তিনি তোমাকে পাঠিয়েছেন।</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ LETTER ============ -->
+    <section id="letter-section" class="content-section pink-bg">
+      <div class="section-header reveal">
+        <h2 class="section-title">শুভ'র চিঠি 💌</h2>
+        <div class="title-line gold"></div>
+      </div>
+
+      <div class="letter-wrapper reveal">
+        <div class="letter-paper">
+          <div class="letter-decoration top">🌹 🌸 🌹</div>
+          <div class="letter-body">
+            <p class="letter-salute">প্রিয় পরী,</p>
+            <p id="letter-text"></p>
+            <div class="letter-sign">
+              <p>তোমাকে ভালোবাসি,</p>
+              <p class="sign-name">তোমার শুভ 💛</p>
+            </div>
+          </div>
+          <div class="letter-decoration bottom">✨ 💛 ✨</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="footer-hearts" id="footer-hearts"></div>
+      <div class="footer-content">
+        <p class="footer-text">শুধু এই দুনিয়ায় নয়, জান্নাতেও তুমি আমার 💛</p>
+        <p class="footer-sub">— মিনহাজুল ইসলাম শুভ → ফারিহা ইসলাম পরী ♾️</p>
+      </div>
+    </footer>
+
+  </div><!-- end main-content -->
+
+  <script src="script.js"></script>
+</body>
+</html>
