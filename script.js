@@ -6,6 +6,14 @@
 // CONFIG — এখানে সময় নির্ধারণ করুন
 // ============================================
 const UNLOCK_DATE = new Date('2026-03-11T00:00:00'); // ১১ই মার্চ রাত ১২:০০
+let hasTriggeredSurprise = false;
+
+function stopCountdownSafely() {
+  if (window.countdownInterval) {
+    clearInterval(window.countdownInterval);
+    window.countdownInterval = null;
+  }
+}
 
 // ============================================
 // চিঠির লেখা — এখানে পরিবর্তন করুন
@@ -67,7 +75,9 @@ function updateCountdown() {
 // TRIGGER SURPRISE — লক খুলে যাবে
 // ============================================
 function triggerSurprise() {
-  clearInterval(countdownInterval);
+  if (hasTriggeredSurprise) return;
+  hasTriggeredSurprise = true;
+  stopCountdownSafely();
 
   const lockScreen = document.getElementById('lock-screen');
   const mainContent = document.getElementById('main-content');
@@ -393,8 +403,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursorTrail();
 
   // 🔒 LIVE MODE — ১১ই মার্চ রাত ১২টায় খুলবে
-  updateCountdown();
   window.countdownInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
 });
 
 // ============================================
