@@ -209,6 +209,28 @@ body {
 
 @keyframes blink { 50% { opacity: 0; } }
 
+.next-btn {
+  background: linear-gradient(135deg, var(--pink), #ff4d8a);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-pink);
+  animation: slideUp 0.8s ease-out 2.5s both, pulseBtn 2s ease-in-out 4s infinite;
+  transition: var(--transition);
+  display: block;
+  margin: 2rem auto 1.5rem;
+  font-weight: 600;
+}
+
+.next-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255,107,157,0.5);
+}
+
 .lock-love {
   font-family: var(--font-script);
   font-size: 1.3rem;
